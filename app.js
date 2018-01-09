@@ -22,7 +22,10 @@ var commentRoutes = require("./routes/comments"),
 mongoose.Promise = global.Promise;
 var app = express();
 //connect database Yelp_camp
-mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true});
+//mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true}); //for local use
+mongoose.connect("mongodb://Mike:Mike@ds163294.mlab.com:63294/db_yelpcamp", {useMongoClient: true});
+//mongodb://<dbuser>:<dbpassword>@ds163294.mlab.com:63294/db_yelpcamp
+
 //use bodyparser
 app.use(bodyParser.urlencoded({extended: true}));
 //set view engine, make .ejs file as default
