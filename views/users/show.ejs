@@ -4,7 +4,7 @@
 	<div class="col-md-4">
 		<h1><%= user.firstName + " " + user.lastName %></h1>
 		<div class="thumbnail">
-			<% if(currentUser && user.avatar.length < 1){ %>
+			<% if(user.avatar.length < 1){ %>
 				<img src="https://res.cloudinary.com/dzi9oazgw/image/upload/t_media_lib_thumb/v1515365276/default_avatar_wju6it.png" alt="user profile image" height="200px" width="200px">
 			<% }else{ %>
 				<img src="<%= user.avatar %>" alt="user profile image">
