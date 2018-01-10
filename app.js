@@ -22,8 +22,9 @@ var commentRoutes = require("./routes/comments"),
 mongoose.Promise = global.Promise;
 var app = express();
 //connect database Yelp_camp
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
 //mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true}); //for local use
-mongoose.connect("mongodb://Mike:Mike@ds163294.mlab.com:63294/db_yelpcamp", {useMongoClient: true});
+mongoose.connect(url, {useMongoClient: true});
 //mongodb://<dbuser>:<dbpassword>@ds163294.mlab.com:63294/db_yelpcamp
 
 //use bodyparser
