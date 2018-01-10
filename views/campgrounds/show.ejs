@@ -130,6 +130,7 @@
   		</div>
 	</div>
 
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMeW3nUYbXygcNbeTCMr_teEyWF8u2Kkc&callback=initMap"></script>
 	<script>
 		function initMap() {
 		    var lat = <%= campground.lat %>;
@@ -140,7 +141,7 @@
 		        center: center,
 		        scrollwheel: false
 		    });
-		    var contentString = "<strong><%= campground.name %><br /><%= campground.location %></strong><p><%= campground.description %></p>"
+		    var contentString = "<strong><%= campground.name %><br /><%= campground.location %></strong>"
 		    
 		    var infowindow = new google.maps.InfoWindow({
 		      content: contentString
@@ -154,7 +155,7 @@
 		    });
 		}
 	</script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMeW3nUYbXygcNbeTCMr_teEyWF8u2Kkc&callback=initMap"></script>
+	
 
 
 
